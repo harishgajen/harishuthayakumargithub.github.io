@@ -147,8 +147,8 @@
                     <div class="quiz_item">
                         <div class="col-lg-12">
                             <div class="text-g-quiz">
-                                <p class="text-white quiz-text">1. <input type="text" size="4px" id="input1"/><text class="quiz-correct" id="check1"></text> is the Big O notation for selection sort in regards to time complexity.</p>
-                                <p class="text-white quiz-text new-innerparagraph">2. The <input type="text" size="4px" id="input2" /><text class="quiz-correct" id="check2"></text> keyword is used to define the function</p>
+                                <p class="text-white quiz-text">1. <input type="text" size="4px" id="input1"/><text class="quiz-correct" id="check1"></text> is the Big O notation for selection sort in regards to space complexity.</p>
+                                <p class="text-white quiz-text new-innerparagraph">2. <input type="text" size="4px" id="input2" /><text class="quiz-correct" id="check2"></text> is the return type for selection sort for the lesson's implementation. </p>
                                 <p class="text-white quiz-text new-innerparagraph">3. Selection sort is a 
                                     
                                     <select id="input3">
@@ -159,6 +159,25 @@
                                     </select>
 
                                     <text class="quiz-correct" id="check3"></text></p>
+                                 <p class="text-white quiz-text new-innerparagraph">4. The time complexity of selection sort (Big O Notation) is: 
+                                    
+                                        <select id="input4">
+                                            <option class="cgray" value="4" selected>-- select --</option>
+                                            <option value="wrong">Big(n log n)</option>
+                                            <option value="wrong">O(2n)</option>
+                                            <option value="correct">O(n^2)</option>
+                                        </select>
+    
+                                        <text class="quiz-correct" id="check4"></text></p>
+                                 <p class="text-white quiz-text new-innerparagraph">5. Arrays passed into a method need to be returned to save changes to the array in the main method
+                                    
+                                        <select id="input5">
+                                            <option class="cgray" value="4" selected>-- select --</option>
+                                            <option value="correct">True</option>
+                                            <option value="wrong">False</option>
+                                        </select>
+    
+                                        <text class="quiz-correct" id="check5"></text></p>
 
 
                                 <button class="submit" id="submit" onclick="submit()">Check Answer</button>
@@ -224,6 +243,20 @@ public class SelectionSortImplementation {
 
         </section>
 
+        <section class="feature_area">
+            <div class="container d-flex justify-content-center">
+                <div class="col-lg-10">
+                    <div class="l_title">
+                        <div class="new-innerparagraph">
+                            <h6 style="padding-bottom: 10px;"> <a class="cgray">Question</a></h6>
+                            <h2 class="text-white lessonsubheading">Code it Yourself!</h2>
+                            <p class="text-white lessonparagraph">Instructions: Implement selection sort into this method to get the intended output!</p>
+                    </div>
+                </div>
+                <iframe src="https://trinket.io/embed/java/8b62bfbfa9" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                
+            </div>
+        </section>
 
 
         <!-- Inside this JavaScript file I've inserted Questions and Options only -->
