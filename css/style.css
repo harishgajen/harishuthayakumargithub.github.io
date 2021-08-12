@@ -975,7 +975,7 @@ a.navbar-brand:hover span {
   animation: bounce 2s infinite;
 }
 @-webkit-keyframes bounce {
-  1 0%,
+  10%,
   20%,
   50%,
   80%,
