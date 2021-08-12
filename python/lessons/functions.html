@@ -7,7 +7,7 @@
         
         <link rel="icon" href="../../img/logo.png" type="image/x-icon" /> 
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>YRCodes - Selection Sort in Java</title>
+        <title>YRCodes - Functions in Python</title>
 
         <!-- Icon css link -->
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
@@ -65,84 +65,114 @@
         <section class="feature_area" style="padding-bottom: 0px;">
             <div class="content">
                 <div class="container d-flex justify-content-center">
-                    <iframe width="768" height="432" src="https://www.youtube.com/embed/6DyLMRApKQQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="768" height="432" src="https://www.youtube.com/embed/z6O2MfstMHc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="l_title text-center">
-                    <h2 class="d-flex justify-content-center text-white lessonhead new-image">Selection Sort</h2>
-                    <p class="d-flex justify-content-center text-white lessondescription lessonparagraph">Concept | Examples | Java Implementation</p>
+                    <h2 class="d-flex justify-content-center text-white lessonhead new-image">Python Functions</h2>
+                    <p class="d-flex justify-content-center text-white lessondescription lessonparagraph">Syntax | Return Statements | Examples</p>
                 </div>
                 
                 <div class="container d-flex justify-content-center">
                     <div class="col-lg-10">
                         <div class="l_title">
-                            <p class="text-white lessonparagraph">Getting Started: In this lesson you will be introduced to the world of algorithms, by learning a crucial sorting algorithm: selection sort. We will cover the concept of the algorithm, then go through an example, and finally implement the algorithm in Java with another example. 
-                                Please note, it is highly suggested that you view the video for the lesson paired with the reading below. More complicated topics, such as algorithms, are typically better explained in video format.</p>
-                            <h6 style="padding-bottom: 30px;"> <a class="cgray download" href="lessonplans/selectionsort.docx" download>Download Lesson Plan Here</a></h6>
+                            <p class="text-white lessonparagraph">Getting Started: In this lesson you will learn all about Python functions. We will explore the syntax, use of parameters and return statements, as well as some debugging common errors students can get.</p>
+                            <h6 style="padding-bottom: 30px;"> <a class="cgray download" href="lessonplans/python-functions.docx" download>Download Lesson Plan Here</a></h6>
                             <div class="new-innerparagraph">
-                                <h2 class="text-white lessonsubheading">What is Selection Sort?</h2>
-                                <p class="text-white lessonparagraph new-innerparagraph">Selection sort, as the name suggests, is a sorting algorithm. This means that it can be used to sort an array of a certain data type. For simplicity’s sake, this lesson will be sorting integers to explain the algorithm, but other data types can also easily be sorted once you understand the algorithm.</p>
-                                <p class="text-white lessonparagraph new-innerparagraph">Selection sort is one of many sorting algorithms. The reason for so many different algorithms existing is because of Big O notation, an interesting term that will be consistently brought up in many computer science classes. Aside from Big O notation, covered in the next section, there are also other factors that impact the algorithms you learn. For example, some algorithms have simpler concepts in comparison to other algorithms. Selection sort is nowhere near the best algorithm to use in regards to Big O notation, but is a great algorithm to get your foot in the door with sorting algorithms.</p>
+                                <h2 class="text-white lessonsubheading">Syntax</h2>
+                                <p class="text-white lessonparagraph new-innerparagraph">A function is a block of organized, reusable code that is only run once called. They can be used for specific tasks or reducing repetitive code. They help us avoid repeating blocks of code in our programs and improve the overall organization by allowing functions to be separated on more than one file. </p>
+                                <div class="new-innerparagraph">
+                                    <p class="text-white lessonparagraph">To create a function, use the <span class="code-text">def</span> keyword followed by a name for the function and a pair of parentheses. Any code within the function is to be indented. See the following example: </p>
+                                </div>
                             </div>
-                           
+                            
+                            <div class="container new-innerparagraph"></div>
+                            <pre class="code-box prettyprint lang-python">
+def hello():
+    print("Hello World")</pre>
 
                             <div class="new-image">
-                                <h2 class="text-white lessonsubheading">Big O Notation</h2>
-                                <p class="text-white new-innerparagraph lessonparagraph">Big O notation refers to the limiting space and time complexity of a certain function. In simpler terms, it can be used to compare algorithms based on how much space and time they use in the worst-case.</p>
-                                <p class="text-white new-innerparagraph lessonparagraph">Selection sort has a Big O notation of O(1) for space, and O(n^2) for space. N refers to the size of the array. For example, array [5, 2, 1, -2, 8] has 5 elements, meaning equals 5.</p>
-                            </div>
-
-                            <div class="new-image">
-                                <h2 class="text-white lessonsubheading">Concept</h2>
-                                <p class="text-white new-innerparagraph lessonparagraph">Selection sort uses a nested for loop. It essentially works through the array from the beginning, with all the elements behind the current index being sorted, and the elements in front of the current element to be unsorted. Eventually, it will reach the end and the entire array will be solved. </p>
-                                <p class="text-white new-innerparagraph lessonparagraph">This can be done using a nested for loop. The outer for loop will start at the first index in the array. Let’s call this value i. The loop will contain a variable known as min_index, which will start by holding the value of i. </p>
-                                <p class="text-white new-innerparagraph lessonparagraph">Next, we will enter the nested for loop, which starts at the index after i. We will call this value j. We will compare the value at index j with that of index i and if it is smaller than the value at index i, then the min_index variable will be set to j. </p>
-                                <p class="text-white new-innerparagraph lessonparagraph">After iterating through the entire array in the nested for loop, we return to our outer for loop, and swap the values at index i and the min_index. This will ensure that the first element of the array now has the smallest value in the array. The next iteration will move onto the second element, and so on. Once the outer array has iterated through every element of the array, it will be sorted. </p>
-                                <p class="text-white new-innerparagraph lessonparagraph">
-                                    Additionally, the outer for loop does not have to iterate to the final element of the array. This is because, all the elements before it will be ordered from least to greatest, and since the last element is checked every time in the inner loop, the final element will always end up being the largest value. </p>    
-                            </div>
-
-
-                            <div class="new-image">
-                                <h2 class="text-white lessonsubheading">Java Implementation</h2>
-                                <p class="text-white new-innerparagraph lessonparagraph">This implementation of the algorithm is an ascending order sort on a sample integer of arrays. </p>
+                                <h2 class="text-white lessonsubheading">Calling a Function</h2>
+                                <p class="text-white new-innerparagraph lessonparagraph">A function does not run by itself, but needs to be 'called' in order for it to run. To call a function, use the name followed by the parentheses and include any parameters if needed.</p>
                             </div>
 
                             <div class="container new-innerparagraph"></div>
-                            <pre class="code-box prettyprint lang-java">
-public class SelectionSortImplementation {
+                            <pre class="code-box prettyprint lang-python">
+hello()
 
-    public static void selectionSort(int[] arr) {
-        for(int i=0; i&lt;arr.length-1; i++) {
-            int minIndex = i;
-            for(int j=i+1; j&lt;arr.length; j++) {
-                if(arr[j] &lt; arr[minIndex])
-                    minIndex = j;
-            }
-            int temp = arr[minIndex];
-            arr[minIndex] = arr[i];
-            arr[i] = temp;
-            printArray(arr);
-        }
-    }
+# OUTPUT
+>> Hello World</pre>
 
-    public static void main(String[] args) {
-        int[] array1 = {31, 15, -12, 4, 10};
-        
-        selectionSort(array1);
-        
-    }
+                            <div class="new-image">
+                                <h2 class="text-white lessonsubheading">Parameters</h2>
+                                <p class="text-white new-innerparagraph lessonparagraph">Functions can take in data, known as parameters. Think of parameters as inputs that can be used throughout the function. Your function is a set of instructions that these parameters follow that can later be mimicked by variables in your main code when you call the function.</p>
+                            </div>
 
-}</pre>
+                            <div class="container new-innerparagraph"></div>
+                            <pre class="code-box prettyprint lang-python">
+def greeting(name):
+    print("Hello", name + "!")
+
+greeting("John")  # John will replace any instance of the name parameter 
+
+# OUTPUT
+>> Hello John!</pre>
+
+                            <div class="new-image">
+                                <h2 class="text-white lessonsubheading">Return Statements</h2>
+                                <p class="text-white new-innerparagraph lessonparagraph">The <span class="code-text">return</span> statement allows the function to return data as a result. No code after the return statement is run.</p>
+                            </div>
+
+                            <div class="container new-innerparagraph"></div>
+                            <pre class="code-box prettyprint lang-python">
+num = int(input())
+
+def square(x):
+    x = x*x
+    # print(x)
+
+    return x  # returns data as a result
+    print("no code after the return statement is executed")
+
+num = square(num)</pre>
+
+                            <div class="new-image">
+                                <h2 class="text-white lessonsubheading">Common Errors</h2>
+                                <p class="text-white new-innerparagraph lessonparagraph">UnboundLocalError: local variable referenced before assignment - this error is caused when variables outside the scope of the function are being used within the function. Either declare them as parameters or global variables to solve.</p>
+                            </div>
+
+                            <div class="container new-innerparagraph"></div>
+                            <pre class="code-box prettyprint lang-python">
+# ERROR CODE
+total = 1
+
+def my_func():
+    total += 1
+    print(total)
+    
+my_func()
+
+>> UnboundLocalError: local variable 'total' referenced before assignment 
+
+# FIX
+total = 1
+
+def my_func(x):
+    x += 1
+    print(x)
+    
+my_func(total)
+
+>> 2</pre>
 
 
                             <div class="new-innerparagraph d-flex justify-content-between">
-                                <button class="text-white next-button lessonparagraph lessondescription" onclick="location.href='../../practice/java/selectionsort-quiz.html';"> &#8592; </button>
+                                <button class="text-white next-button lessonparagraph lessondescription" onclick="location.href='../practice/functions.html';"> &#8592; </button>
                                 
                     
 
-                                <button class="text-white practicebtn lessonparagraph lessonproblems" onclick="location.href='../../practice/java/selectionsort-quiz.html';">Practice Problems</button>
+                                <button class="text-white practicebtn lessonparagraph lessonproblems" onclick="location.href='../practice/functions.html';">Practice Problems</button>
                                 
-                                <button class="text-white next-button lessonparagraph lessondescription" onclick="location.href='../../practice/java/selectionsort-quiz.html';"> &#8594; </button>
+                                <button class="text-white next-button lessonparagraph lessondescription" onclick="location.href='../practice/functions.html';"> &#8594; </button>
                             
                             
                             </div>
