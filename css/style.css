@@ -975,7 +975,7 @@ a.navbar-brand:hover span {
   animation: bounce 2s infinite;
 }
 @-webkit-keyframes bounce {
-  0%,
+  1 0%,
   20%,
   50%,
   80%,
@@ -1314,6 +1314,14 @@ a.navbar-brand:hover span {
     position: relative;
     right: 15px;
   }
+
+  /* .test1 {
+    display: none;
+  }
+
+  .test2 {
+    display: none;
+  } */
 }
 
 @media all and (max-width: 786px) {
@@ -3862,9 +3870,9 @@ a.navbar-brand:hover span {
 .start_btn button:hover {
   background: #7371b986;
 }
-
+/* 
 .info_box {
-  width: 540px;
+  width: 440px;
   background: #320361;
   border-radius: 20px;
   border: 2px solid #7371b9;
@@ -3872,7 +3880,7 @@ a.navbar-brand:hover span {
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
-}
+} */
 
 .info_box .info-title {
   height: 60px;
@@ -3920,6 +3928,42 @@ a.navbar-brand:hover span {
   border-radius: 20px;
   border: 2px solid #7371b9;
   transition: all 0.3s ease;
+}
+@media all and (min-width: 601px) {
+  .info_box {
+    width: 540px;
+    background: #320361;
+    border-radius: 20px;
+    border: 2px solid #7371b9;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+}
+@media all and (max-width: 600px) and (min-width: 501px) {
+  .info_box {
+    width: 440px;
+    background: #320361;
+    border-radius: 20px;
+    border: 2px solid #7371b9;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+}
+@media all and (max-width: 500px) {
+  .info_box {
+    width: 340px;
+    background: #320361;
+    border-radius: 20px;
+    border: 2px solid #7371b9;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
 }
 
 .quiz_box {
