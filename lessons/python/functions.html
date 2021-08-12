@@ -65,21 +65,21 @@
         <section class="feature_area" style="padding-bottom: 0px;">
             <div class="content">
                 <div class="container d-flex justify-content-center">
-                    <img src="../../img/home-slider/11.png">
+                    <iframe width="768" height="432" src="https://www.youtube.com/embed/z6O2MfstMHc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="l_title text-center">
-                    <h2 class="d-flex justify-content-center text-white lessonhead">Python Functions</h2>
+                    <h2 class="d-flex justify-content-center text-white lessonhead new-image">Python Functions</h2>
                     <p class="d-flex justify-content-center text-white lessondescription lessonparagraph">Syntax | Return Statements | Examples</p>
                 </div>
                 
                 <div class="container d-flex justify-content-center">
                     <div class="col-lg-10">
                         <div class="l_title">
-                            <p class="text-white lessonparagraph">Getting Started: In this lesson you will learn all about Python functions. We will explore the syntax, use of parameters and return statements, as well as some common errors students get and how to debug those.</p>
+                            <p class="text-white lessonparagraph">Getting Started: In this lesson you will learn all about Python functions. We will explore the syntax, use of parameters and return statements, as well as some debugging common errors students can get.</p>
                             <h6 style="padding-bottom: 30px;"> <a class="cgray download" href="lessonplans/python-functions.docx" download>Download Lesson Plan Here</a></h6>
                             <div class="new-innerparagraph">
                                 <h2 class="text-white lessonsubheading">Syntax</h2>
-                                <p class="text-white lessonparagraph new-innerparagraph">A function is a block of organized, reusable code that is only run once called. They can be used for specific tasks or reducing repetitive code. They let developers avoid having repeating blocks of code in a program and overall improve the organization of a program by allowing functions to be separated on more than one file. </p>
+                                <p class="text-white lessonparagraph new-innerparagraph">A function is a block of organized, reusable code that is only run once called. They can be used for specific tasks or reducing repetitive code. They help us avoid repeating blocks of code in our programs and improve the overall organization by allowing functions to be separated on more than one file. </p>
                                 <div class="new-innerparagraph">
                                     <p class="text-white lessonparagraph">To create a function, use the <span class="code-text">def</span> keyword followed by a name for the function and a pair of parentheses. Any code within the function is to be indented. See the following example: </p>
                                 </div>
@@ -92,7 +92,7 @@ def hello():
 
                             <div class="new-image">
                                 <h2 class="text-white lessonsubheading">Calling a Function</h2>
-                                <p class="text-white new-innerparagraph lessonparagraph">A function does not run by itself, but rather needs to be called inorder for it to run. To call a function, use the name followed by the parentheses and include any parameters if needed.</p>
+                                <p class="text-white new-innerparagraph lessonparagraph">A function does not run by itself, but needs to be 'called' in order for it to run. To call a function, use the name followed by the parentheses and include any parameters if needed.</p>
                             </div>
 
                             <div class="container new-innerparagraph"></div>
@@ -104,7 +104,7 @@ hello()
 
                             <div class="new-image">
                                 <h2 class="text-white lessonsubheading">Parameters</h2>
-                                <p class="text-white new-innerparagraph lessonparagraph">Functions can take in data, known as parameters. Think of parameters as temporary variables that can be used throughout the function. Your function is a set of instructions that these parameters follow that can later be mimicked by variables in your main code when you call the function.</p>
+                                <p class="text-white new-innerparagraph lessonparagraph">Functions can take in data, known as parameters. Think of parameters as inputs that can be used throughout the function. Your function is a set of instructions that these parameters follow that can later be mimicked by variables in your main code when you call the function.</p>
                             </div>
 
                             <div class="container new-innerparagraph"></div>
@@ -112,7 +112,7 @@ hello()
 def greeting(name):
     print("Hello", name + "!")
 
-greeting("John")  # John is the data being passed in as the parameter of the greeting function. 
+greeting("John")  # John will replace any instance of the name parameter 
 
 # OUTPUT
 >> Hello John!</pre>
@@ -124,27 +124,25 @@ greeting("John")  # John is the data being passed in as the parameter of the gre
 
                             <div class="container new-innerparagraph"></div>
                             <pre class="code-box prettyprint lang-python">
-def arr_sum(x, total):
-    for i in x:
-        total += i
-    return total
-    
-nums = [2, 11, 7, 4, 16]
-sum = 0
+num = int(input())
 
-sum = arr_sum(nums, sum)  # sum updates to the value the arr_sum function returned
-print(sum)
+def square(x):
+    x = x*x
+    # print(x)
 
-# OUTPUT
->> 40</pre>
+    return x  # returns data as a result
+    print("no code after the return statement is executed")
+
+num = square(num)</pre>
 
                             <div class="new-image">
                                 <h2 class="text-white lessonsubheading">Common Errors</h2>
-                                <p class="text-white new-innerparagraph lessonparagraph">UnboundLocalError: local variable referenced before assignment - this error is caused when variables outside the scope of the function are being used within the function hence the refrenced before assignment remark. Either declare them as parameters or global variables to solve.</p>
+                                <p class="text-white new-innerparagraph lessonparagraph">UnboundLocalError: local variable referenced before assignment - this error is caused when variables outside the scope of the function are being used within the function. Either declare them as parameters or global variables to solve.</p>
                             </div>
 
                             <div class="container new-innerparagraph"></div>
                             <pre class="code-box prettyprint lang-python">
+# ERROR CODE
 total = 1
 
 def my_func():
@@ -172,7 +170,7 @@ my_func(total)
                                 
                     
 
-                                <button class="text-white practicebtn lessonparagraph lessonproblems" onclick="location.href='../../practice/python/test-quiz.html';">Practice Problems</button>
+                                <button class="text-white practicebtn lessonparagraph lessonproblems" onclick="location.href='../../practice/python/functions-quiz.html';">Practice Problems</button>
                                 
                                 <button class="text-white next-button lessonparagraph lessondescription" onclick="location.href='../../practice/python/test-quiz.html';"> &#8594; </button>
                             

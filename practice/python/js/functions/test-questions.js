@@ -13,46 +13,46 @@ let questions = [
   },
     {
     numb: 2,
-    question: "What does CSS stand for?",
-    answer: "Cascading Style Sheet",
+    question: "Which of the following names is not appropriate for functions?",
+    answer: "333_function",
     options: [
-      "Common Style Sheet",
-      "Colorful Style Sheet",
-      "Computer Style Sheet",
-      "Cascading Style Sheet"
+      "function",
+      "_super_long_function_name",
+      "my_function",
+      "333_function"
     ]
   },
     {
     numb: 3,
-    question: "What does PHP stand for?",
-    answer: "Hypertext Preprocessor",
+    question: "Which is correct for listing multiple parameters?",
+    answer: "(a, b)",
     options: [
-      "Hypertext Preprocessor",
-      "Hypertext Programming",
-      "Hypertext Preprogramming",
-      "Hometext Preprocessor"
+      "(a + b)",
+      "(a : b)",
+      "(a, b)",
+      "None of the above"
     ]
   },
     {
     numb: 4,
-    question: "What does SQL stand for?",
-    answer: "Structured Query Language",
+    question: "When is the best time to use a function?",
+    answer: "All of the above",
     options: [
-      "Stylish Question Language",
-      "Stylesheet Query Language",
-      "Statement Question Language",
-      "Structured Query Language"
+      "To reduce repeating code",
+      "To promote organization",
+      "To create reusable code",
+      "All of the above"
     ]
   },
     {
     numb: 5,
-    question: "What does XML stand for?",
-    answer: "eXtensible Markup Language",
+    question: "Which errors commonly occur when working with functions?",
+    answer: "UnboundLocalError",
     options: [
-      "eXtensible Markup Language",
-      "eXecutable Multiple Language",
-      "eXTra Multi-Program Language",
-      "eXamine Multiple Language"
+      "UnboundLocalError",
+      "ValueError",
+      "OSError",
+      "ZeroDivisionError"
     ]
   },
 
