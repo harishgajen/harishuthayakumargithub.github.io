@@ -1299,6 +1299,57 @@ a.navbar-brand:hover span {
   right: 15px;
 }
 
+@media all and (max-width: 1200px) {
+  .quiz_item {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    -webkit-transition: all 400ms linear 0s;
+    -o-transition: all 400ms linear 0s;
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+    height: 440px;
+    width: 1250px;
+    border-radius: 20px;
+    border: 2px solid #7371b9;
+    background-color: #320361;
+    position: relative;
+    right: 15px;
+  }
+}
+
+@media all and (max-width: 786px) {
+  .quiz_item {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    -webkit-transition: all 400ms linear 0s;
+    -o-transition: all 400ms linear 0s;
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+    height: 540px;
+    width: 1250px;
+    border-radius: 20px;
+    border: 2px solid #7371b9;
+    background-color: #320361;
+    position: relative;
+    right: 15px;
+  }
+}
+
+@media all and (max-width: 557px) {
+  .quiz_item {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    -webkit-transition: all 400ms linear 0s;
+    -o-transition: all 400ms linear 0s;
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+    height: 640px;
+    width: 1250px;
+    border-radius: 20px;
+    border: 2px solid #7371b9;
+    background-color: #320361;
+    position: relative;
+    right: 15px;
+  }
+}
+
 .quiz-menu {
   position: absolute;
   height: 100px;
