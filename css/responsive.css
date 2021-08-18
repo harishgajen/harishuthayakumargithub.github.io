@@ -237,6 +237,28 @@
     height: 0;
     width: 0;
   }
+
+  i.fa-arrow-down {
+    display: none;
+  }
+
+  .course_item {
+    width: 600px;
+  }
+
+  .vertical-menu {
+    left: 75px;
+    width: 260px;
+  }
+
+  .test2 {
+    left: 300px;
+  }
+
+  .vertical-menu2 {
+    left: 365px;
+    width: 260px;
+  }
 }
 
 @media (max-width: 870px) {
@@ -307,6 +329,21 @@
     position: relative;
     left: -10px;
   }
+
+  .course_item {
+    width: 350px;
+  }
+  .mainpage_item {
+    display: none;
+  }
+
+  .vertical-menu {
+    left: 125px;
+  }
+
+  .vertical-menu2 {
+    left: 125px;
+  }
 }
 @media (max-width: 575px) {
   .team_img_inner .team_img_item img {
@@ -365,6 +402,9 @@
   .elements_title {
     text-align: center;
   }
+  .down img {
+    display: none;
+  }
 }
 @media (max-width: 480px) {
   .l_title h2 {
@@ -410,5 +450,25 @@
   }
   .contact_map_area .mapBox1 {
     min-height: 575px;
+  }
+
+  .vertical-menu {
+    left: 50px;
+  }
+
+  .vertical-menu2 {
+    left: 50px;
+  }
+
+  .l_title h2 {
+    font-size: 30px;
+  }
+
+  .text_3d .l_title {
+    position: relative;
+    left: -50px;
+  }
+
+  .text-test1 {
   }
 }
