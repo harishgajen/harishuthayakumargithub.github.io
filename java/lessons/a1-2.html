@@ -7,7 +7,7 @@
         
         <link rel="icon" href="../../img/logo.png" type="image/x-icon" /> 
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>YRCodes - A.1.1</title>
+        <title>YRCodes - A.1.2</title>
 
         <!-- Icon css link -->
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
@@ -68,62 +68,75 @@
                     <iframe width="768" height="432" src="https://www.youtube.com/embed/6DyLMRApKQQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="l_title text-center">
-                    <h2 class="d-flex justify-content-center text-white lessonhead new-image">Integer Division and Modulus</h2>
+                    <h2 class="d-flex justify-content-center text-white lessonhead new-image">Type Conversions</h2>
                     <p class="d-flex justify-content-center text-white lessondescription lessonparagraph">Concept | Examples | Java Implementation</p>
                 </div>
                 
                 <div class="container d-flex justify-content-center">
                     <div class="col-lg-10">
                         <div class="l_title">
-                            <p class="text-white lessonparagraph">Getting Started: This short lesson will cover the fundamentals of integer division and the use of the modulus operator. First the theory will be introduced and then it will be proven through some examples in Java. </p>
+                            <p class="text-white lessonparagraph">Getting Started: This lesson will cover how to convert both numerical data types and character data types. </p>
                             <div class="new-innerparagraph">
-                                <h2 class="text-white lessonsubheading">What is Integer Division?</h2>
-                                <p class="text-white lessonparagraph new-innerparagraph">An integer takes up 4 bytes of memory and is a whole number that is not a fraction. 4.5 cannot be an integer because it is not a whole number. When the quotient from division is not an integer, the concept of integer division comes in. </p>
-
+                                <h2 class="text-white lessonsubheading">Recall: What are Data Types?</h2>
+                                <p class="text-white lessonparagraph new-innerparagraph">In languages such as Java, any variable that is created is bound to a certain data type. For example, <span class="code-text">int x = 5;</span> states that the variable x is an integer. This means that the number cannot exceed 4 bytes in size, and it also must be an integer (a whole number). </p>
+                                <p class="text-white lessonparagraph new-innerparagraph">The primitive data types (the fundamental data types) in Java include: int, double, boolean, and others. String is a reference data type. </p>
                             </div>
 
                             <div class="new-image">
-                                <h2 class="text-white lessonsubheading">Concept</h2>
-                                <p class="text-white new-innerparagraph lessonparagraph">At the base level, when you divide and get a non-integral quotient, everything after the decimal point is thrown away. For example: 12/5 which is 2.4, which will be expressed as 2. This also means that numbers will always be rounded down and never up. </p>
+                                <h2 class="text-white lessonsubheading">Converting Numerical Data Types</h2>
+                                <p class="text-white new-innerparagraph lessonparagraph">Firstly, numerical data types, such as int and double, can be converted between with little work. This can be done using casting. Casting is done by including the name of the data type you want to convert to in front of the number you want to convert.</p>
+                                <p class="text-white new-innerparagraph lessonparagraph">For example, to convert <span class="code-text">double y = 15.55;</span> to an int, the following must be done: <span class="code-text">int x = (int)y</span>. Variable x will now have a value of 15. It is important to note that, like integer diviion, when converting to an integer, the number will always be rounded down if there is a decimal.</p>
+                                <p class="text-white new-innerparagraph lessonparagraph">The places where you use casting can also create different results. The examples below work with the same numbers, but yield different results based onw here the casting is done.</p>
+                                <p class="text-white new-innerparagraph lessonparagraph">1. <span class="code-text">double x = (int)5.5+3.6;</span> will store 8.6, since only 5.5 is being cast to an int. <span class="code-text">5 + 3.6 = 8.6</span></p>
+                                <p class="text-white new-innerparagraph lessonparagraph">2. <span class="code-text">double y = (int)5.5 + (int)3.6;</span> will store 8, since 5.5 and 3.6 are casted to integers first, and then they are added together. <span class="code-text">5 + 3 = 8</span></p>
+                                <p class="text-white new-innerparagraph lessonparagraph">3. <span class="code-text">double z = (int)(5.5+3.6);</span> will store 9, since 5.5 and 3.6 are first added, and then the sum of the two (9.1) is casted to an int. <span class="code-text">5.5 + 3.6 = 9.1 => (int)(9.1) = 9</span></p>
                             </div>
 
                             <div class="new-image">
-                                <h2 class="text-white lessonsubheading">The Modulus Operator</h2>
-                                <p class="text-white new-innerparagraph lessonparagraph">Since integer division gets rid of any numbers after the decimal, the modulus operator (symbol: %) can be used to get the remainder of a division operation</p>
-                                <p class="text-white new-innerparagraph lessonparagraph">This is done using the % symbol in place of the division symbol (/). For example the remainder of 5 divided by 3, which is 2, can be calculated through the operation: 5 % 3.</p>
+                                <h2 class="text-white lessonsubheading">Converting Character Data Types</h2>
+                                <p class="text-white new-innerparagraph lessonparagraph">These conversions will be using methods unique to Java, however, the same concept can be applied to other languages. For other languages, please refer to documentation on your respective language's methods for conversion.</p>
+                                <p class="text-white new-innerparagraph lessonparagraph">To convert a String to a char, a method called <span class="code-text">charAt()</span> is used. This method is a part of every String object. To call it, write the name of your String variable, followed by a dot, and then the charAt method.
+                                The parameter for the method is the index of the string that you want to get a char of (since the char data type is used for a single variable). For example, the string "Bob", has 'B' at index 0, 'o' at index 1, and 'b' at index 2.</p>
+                                <p class="text-white new-innerparagraph lessonparagraph">Example:</p>
+                                <pre class="code-box prettyprint lang-java">
+String name = "Anderson";
+char firstLetter = name.charAt(0); // 'A'
+char lastLetter = name.charAt(7); // 'n'
+</pre>
+                                <p class="text-white new-innerparagraph lessonparagraph">To convert a char to a String, the <span class="code-text">String.valueOf()</span> method is used. The parameter requires a char to be passed into it.</p>
+                                <p class="text-white new-innerparagraph lessonparagraph">Example:</p>
+                                <pre class="code-box prettyprint lang-java">
+char letter = 'a';
+String sequence = String.valueOf(letter) + "bcd"; // "abcd"
+                                </pre>
+                                <p class="text-white new-innerparagraph lessonparagraph">Each numerical data type has a built-in function to convert from a String to that data type. 
+                                    For example, to convert a String to an Integer, there is the function <span class="code-text">Integer.parseInt()</span> in which the parameter is a string to convert from.
+                                    However, the same is applicable for a Double, with the <span class="code-text">Double.parseDouble()</span> function. All numerical data types have this function built in.
+                                </p>
+                                <p class="text-white new-innerparagraph lessonparagraph">Example:</p>
+                                <pre class="code-box prettyprint lang-java">
+String userID = "5521239";
+int convertedUserID = Integer.parseInt(userID); 
+                                </pre>
+                                <p class="text-white new-innerparagraph lessonparagraph">Finally, to convert from numerical data types to a string, there is the <span class="code-text">String.valueOf()</span> method where the number is passed as the parameter. 
+                                    Alternatively, if for example you have: <span class="code-text">Integer num = 5;</span>, you could also use <span class="code-text">num.toString()</span> to do the same thing. There is a negligible difference between the two. This can not be done on primitive data types (int, double, etc.), 
+                                    but can be used with object data types (String, Integer, Double).
+                                Fun fact: when <span class="code-text">System.out.println();</span> is used, the toString method is called on all the objects that are included as parameters to be printed.</p>
+                                <pre class="code-box prettyprint lang-java">
+int num = 543;
+String num1 = num.toString(); // "543"
+String num2 = String.valueOf(num); // "543"
+                                </pre>                                
                             </div>
-
-
-                            <div class="new-image">
-                                <h2 class="text-white lessonsubheading">Java Implementation</h2>
-                                <p class="text-white new-innerparagraph lessonparagraph">This Java Implementation shows the syntax of integer division and modulus in action, and the resultant values of the operations. </p>
-                            </div>
-
-                            <div class="container new-innerparagraph"></div>
-                            <pre class="code-box prettyprint lang-java">
-public class A1_1_1 {
-
-    public static void main(String[] args) {
-        int a = 14;
-        int b = 4;
-        int c = a / b;
-        System.out.println(c); // 3 (the quotient, using integer division, of 14/4 is 3).
-        int d = a % b;
-        System.out.println(d); // 2 (the remainder of 14 divided by 4 is 2)
-
-    }
-
-}</pre>
-
 
                             <div class="new-innerparagraph d-flex justify-content-between">
-                                <button class="text-white next-button lessonparagraph lessondescription" onclick="location.href='../practice/selectionsort.html';"> &#8592; </button>
+                                <button class="text-white next-button lessonparagraph lessondescription" onclick="location.href='a1-1.html';"> &#8592; </button>
                                 
                     
 
                                 <button class="text-white practicebtn lessonparagraph lessonproblems" onclick="location.href='../practice/selectionsort.html';">Practice Problems</button>
                                 
-                                <button class="text-white next-button lessonparagraph lessondescription" onclick="location.href='a1-2.html';"> &#8594; </button>
+                                <button class="text-white next-button lessonparagraph lessondescription" onclick="location.href='../practice/selectionsort.html';"> &#8594; </button>
                             
                             
                             </div>
