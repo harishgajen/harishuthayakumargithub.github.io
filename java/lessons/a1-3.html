@@ -134,16 +134,28 @@ str1.compareTo(str2) &lt= 0; // Checks if str1 is less than (comes before) or eq
 
                             <div class="container new-innerparagraph"></div>
                             <pre class="code-box prettyprint lang-java">
-public class A1_1_1 {
+public class A1_1_3 {
 
     public static void main(String[] args) {
-        int a = 14;
-        int b = 4;
-        int c = a / b;
-        System.out.println(c); // 3 (the quotient, using integer division, of 14/4 is 3).
-        int d = a % b;
-        System.out.println(d); // 2 (the remainder of 14 divided by 4 is 2)
-
+        char c1 = '1';
+        char c2 = 'C';
+        if (c1 < c2) {
+            System.out.println("'1' is less than 'C'"); // This will be the output
+        } else if (c1 > c2) {
+            System.out.println("'1' is greater than 'C'");
+        } else {
+            System.out.println("'1' is equal to 'C'");
+        }
+        
+        String s1 = "Ms. Kanderfield";
+        String s2 = "Bart";
+        if(s1.compareTo(s2) < 0) { 
+            System.out.println("Ms. Kanderfield is less than Bart");
+        } else if(s1.compareTo(s2) > 0) {
+            System.out.println("Ms. Kanderfield is greater than Bart"); // This will be the output
+        } else {
+            System.out.println("Ms. Kanderfield is equal to Bart");
+        }
     }
 
 }</pre>
