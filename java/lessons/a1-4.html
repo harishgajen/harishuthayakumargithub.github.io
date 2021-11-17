@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="icon" href="../../img/logo.png" type="image/x-icon" /> 
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>YRCodes - A.1.4</title>
+
+        <!-- Icon css link -->
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- Rev slider css -->
+        <link href="../../vendors/revolution/css/settings.css" rel="stylesheet">
+        <link href="../../vendors/revolution/css/layers.css" rel="stylesheet">
+        <link href="../../vendors/revolution/css/navigation.css" rel="stylesheet">
+        
+        <!-- Extra plugin css -->
+        <link href="../../vendors/owl-carousel/owl.carousel.min.css" rel="stylesheet">
+        
+        <link href="../../css/style.css" rel="stylesheet">
+        <link href="../../css/responsive.css" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="../../google-code-prettify/skins/sons-of-obsidian.css">
+        <script type="text/javascript" src="../../google-code-prettify/prettify.js?skin=sons-of-obsidian"></script>
+    </head>
+
+    <body onload="PR.prettyPrint()">
+        
+        <!--================Header Menu Area =================-->
+        <header class="main_menu_area">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="logobox">
+                    <a class="navbar-brand" href="../../index.html"><img class="logo" src="../../img/logo.png"><span class="text-white logofont">YRCodes</span></a> </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../index.html#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../index.html#courses">Courses</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!--================End Header Menu Area =================-->
+
+        <!--================Slider Area =================-->
+    
+        <!--================End Slider Area =================-->
+        
+        <!--================Feature Area =================-->
+        <section class="feature_area"></section>
+        
+        <section class="feature_area" style="padding-bottom: 0px;">
+            <div class="content">
+                <div class="container d-flex justify-content-center">
+                    <iframe width="768" height="432" src="https://www.youtube.com/embed/6DyLMRApKQQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="l_title text-center">
+                    <h2 class="d-flex justify-content-center text-white lessonhead new-image">Limits of Finite Data Representation</h2>
+                    <p class="d-flex justify-content-center text-white lessondescription lessonparagraph">Concept | Examples | Java Implementation</p>
+                </div>
+                
+                <div class="container d-flex justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="l_title">
+                            <p class="text-white lessonparagraph">Getting Started: This short lesson will be primarily conceptual, covering the limits of different data types, helping you choose which data types are best to use when coding. </p>
+                            <div class="new-innerparagraph">
+                                <h2 class="text-white lessonsubheading">Intro: Common Conventions</h2>
+                                <p class="text-white lessonparagraph new-innerparagraph">Up until now, you have likely used <span class="code-text">int</span> when working with integers despite the option of <span class="code-text">long</span> and <span class="code-text">short</span>. Additionally, with floating point numbers, you probably use <span class="code-text">double</span> when there is also the option to use <span class="code-text">float</span>.
+                                This lesson will clarify why these conventions exist. </p>
+                            </div>
+
+                            <div class="new-image">
+                                <h2 class="text-white lessonsubheading">Memory Limitations</h2>
+                                <p class="text-white new-innerparagraph lessonparagraph">When your machine executes a program, it has a limited amount of memory (RAM) available to use where needed in the program. Every variable declared takes up a certain amount of memory. 
+                                Some data types take up more, while others take up less. The trade-off is that the types that take up less memory, in turn store a smaller number of digits. 
+                                Here are some commonly used data types with their memory size and number bounds.</p>
+                                <p class="text-white new-innerparagraph lessonparagraph"><span class="code-text">int</span> - 4 bytes - -2,147,483,648 to 2,147,483,647
+                                    <br> <span class="code-text">short</span> - 2 bytes | -32,768 to 32,767
+                                    <br> <span class="code-text">long</span> - 8 bytes | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+                                    <br>
+                                    <br> <span class="code-text">double</span> - 8 bytes | 4.9E-324 to 1.7976931348623157E308
+                                    <br> <span class="code-text">float</span> - 4 bytes | 1.4E-45 to 3.4028235E38
+                                    <br>
+                                    <br> <span class="code-text">boolean</span> - 2 bytes
+                                    <br> <span class="code-text">char</span> - 2 bytes
+                                </p>
+                            </div>
+
+                            <div class="new-image">
+                                <h2 class="text-white lessonsubheading">Why Int and Double?</h2>
+                                <p class="text-white new-innerparagraph lessonparagraph">Firstly, <span class="code-text">int</span> is used most frequently because it is right in the middle of <span class="code-text">short</span> and <span class="code-text">long</span>.
+                                It has the balance between taking up a medium amount of storage and a medium number of digits. </p>
+                                <p class="text-white new-innerparagraph lessonparagraph">Secondly, <span class="code-text">double</span> is used most frequently because it provides more accuracy than <span class="code-text">float</span>.
+                                This is because of the way the floating point system works. To ensure the acurate storage of numbers, doubles are used more often. For example, in a banking application, it is very important for all numbers to be entirely accurate.</p>                   
+                                <p class="text-white new-innerparagraph lessonparagraph">Of course, if you need to preserve memory, you can opt to use <span class="code-text">short</span> and <span class="code-text">float</span>. 
+                                    On the other hand, if you have plenty of memory and need to store large number and retain accuracy, you can use <span class="code-text">long</span> and <span class="code-text">double</span>.</p>
+                            </div>
+
+                            <div class="new-innerparagraph d-flex justify-content-between">
+                                <button class="text-white next-button lessonparagraph lessondescription" onclick="location.href='a1-1.html';"> &#8592; </button>
+                                
+                    
+
+                                <button class="text-white practicebtn lessonparagraph lessonproblems" onclick="location.href='../practice/selectionsort.html';">Practice Problems</button>
+                                
+                                <button class="text-white next-button lessonparagraph lessondescription" onclick="location.href='../practice/selectionsort.html';"> &#8594; </button>
+                            
+                            
+                            </div>
+
+                            <div class="d-flex justify-content-between sidepadding">
+                                <div>
+                                    <h6 style="padding-bottom:0px;">Back</h6> 
+                                    <p class="text-white lessonparagraph lessondescription">Previous Lesson</p>
+                                </div>
+                                
+                                <div>
+                                    <h6 class="text-right" style="padding-bottom:0px;">Next</h6>
+                                    <p class="text-white lessonparagraph lessondescription text-right">Next Lesson</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </section>
+
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="../../js/jquery-3.2.1.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="../../js/popper.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <!-- Rev slider js -->
+        <script src="../../vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
+        <script src="../../vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+        <script src="../../vendors/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+        <script src="../../vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
+        <script src="../../vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+        <script src="../../vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+        <script src="../../vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+        <script src="../../vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+        <!-- Extra plugin css -->
+        <script src="../../vendors/counterup/jquery.waypoints.min.js"></script>
+        <script src="../../vendors/counterup/jquery.counterup.min.js"></script> 
+        <script src="../../vendors/counterup/apear.js"></script>
+        <script src="../../vendors/counterup/countto.js"></script>
+        <script src="../../vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="../../vendors/magnify-popup/jquery.magnific-popup.min.js"></script>
+        <script src="../../js/smoothscroll.js"></script>
+        <!-- <script src="js/video.js"></script> -->
+
+        <script src="../../js/theme.js"></script>
+    </body>
+</html>
+    
