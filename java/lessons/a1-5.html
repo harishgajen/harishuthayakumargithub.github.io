@@ -95,18 +95,25 @@ int[] numbers = new int[5];
                                 <p class="text-white new-innerparagraph lessonparagraph">Here is the format of initializing a 2D array: <span class="code-text">int[][] abc = new int[5][4];</span>. The only difference in the syntax of initializing a regular integer array is the presence of an additional pair of square brackets. 
                                     The purpose of the additional round brackets is to provide the size of that "second dimension" brackets is to provide the size of that second dimension. For example, to create a 2D integer array made up of 5 arrays, with 6 elements in each of those arrays, it would be initialized with the following statement: 
                                 <span class="code-text">int[][] arr = new int[5][6];</span></p>
-                                <p class="text-white new-innerparagraph lessonparagraph">Like with normal arrays, the index starts at 0. Therefore, the format to print the 4th element in the 2nd array would be: <span class="code-text">System.out.println(arr[1][3]); </span> Here, 1 is the index of the second array and 3 is the index of the 4th element in that array. </p>
-                                <p class="text-white new-innerparagraph lessonparagraph">In Java, the easiest data type to compare is <span class="code-text">char</span> since it is a primitive data type, unlike <span class="code-text">String</span>, which is an object data type. 
-                                Since it is a primitive data type, it can be compared following the same format as numerical data types like integers. For example, <span class="code-text">if ('C' == 'A') { System.out.println("They are equal!"); }</span> works perfectly fine. </p>
-                                <p class="text-white new-innerparagraph lessonparagraph">Examples: 
+                                <p class="text-white new-innerparagraph lessonparagraph">Like with normal arrays, the index starts at 0. Therefore, the format to print the 4th element in the 2nd array would be: <span class="code-text">System.out.println(arr[1][3]); </span> Here, 1 is the index of the second array and 3 is the index of the 4th element in that second array. </p>
+                                <p class="text-white new-innerparagraph lessonparagraph">Another important concept is traversing a 2D array. With one dimensional arrays, a singular for loop is sufficient to traverse the array, and print out all the elements, for example. This task is done using a nested for loop. The outer for loop is used to traverse the arrays within the array, and the inner for loop is used to traverse the elements within each array that the outer for loop is currently on. 
+                                    Another way of conceptualizing this, is that the outer for loop starts from the first row and the inner for loop traverses each element in that row by going through each column. This process is then repeated with each row/column combination. </p>
+                                <p class="text-white new-innerparagraph lessonparagraph">Example: 
+                                    <br>Note 1: Instead of initializing the 2d array with a set number of arrays and set number of elements within each array, this example initializes the array with values within each. This allows for each array in the 2d array to have different sizes.
+                                    <br>Note 2: The condition for the inner for loop is <span class="code-text">arr[r].length</span> to check the length of the specific array within the 2d array that it is currently checking. Since in this example, each array has a variable length, this ensures
+                                    that all elements are printed out.
+                                    <br>Note 3: Inside the nested for loop, <span class="code-text">System.out.print()</span> is used instead of <span class="code-text">System.out.println()</span> so that the elements within the same array are printed on the same line.
                                     <pre class="code-box prettyprint lang-java">
-String name1 = "Rob";
-String name2 = "Dan";
-String name3 = "Rob";
-System.out.println(name1.equals(name2)); // false
-System.out.println(name1.equals(name3)); // true
-System.out.println("Anderson".equals("anderson")); // false (differences in upper/lower case will result in false)
-System.out.println("Anderson".equals("Anderson")); // true
+int [][] arr = {{12, 5, 6, 1},
+			    {28, 311, -5, 6},
+				{-2, 15, 27}};
+		// r for row, c for column
+		for (int r = 0; r &lt arr.length; r++) { 
+			for (int c = 0; c &lt arr[r].length; c++) {
+				System.out.print(arr[r][c] + " ");
+			}
+			System.out.println(); // moving to next line
+		}
 </pre>
                                 </p>
                             </div>
